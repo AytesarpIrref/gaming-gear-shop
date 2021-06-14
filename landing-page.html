@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="asset/css/landing-style.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <title>GamingGearShop_LandingPage</title>
+  </head>
+  <body>
+    <!-- awal navbar -->
+    <nav class="navbar navbar-light position-fixed w-100">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="asset/img/landing-page/logo-ggs.png"
+            alt=""
+            width="150"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <div class="masuk-daftar ms-auto">
+          <button
+            class="btn btn-primary me-md-1"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+            type="button"
+          >
+            Masuk
+          </button>
+          <button
+            class="btn btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#daftarModal"
+            type="button"
+          >
+            Daftar
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <!-- awal modals -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Masuk</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-danger" role="alert">
+              Form belum berjalan!
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="username">Nomor HP atau Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Kata sandi</label>
+                <input
+                  type="password"
+                  class="form-control has-validation"
+                  id="password"
+                  name="password"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <a href="">Lupa kata sandi?</a>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="me-auto">
+              Belum punya akun?
+              <a href="" data-bs-toggle="modal" data-bs-target="#daftarModal"
+                >Daftar</a
+              >
+            </p>
+            <button type="button" class="btn btn-primary">Masuk</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="daftarModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Daftar</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-danger" role="alert">
+              Form belum berjalan!
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="username">Nomor HP atau Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Kata sandi</label>
+                <input
+                  type="password"
+                  class="form-control has-validation"
+                  id="password"
+                  name="password"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Ulangi Kata sandi</label>
+                <input
+                  type="password"
+                  class="form-control has-validation"
+                  id="password"
+                  name="password"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="me-auto">
+              Sudah punya akun?
+              <a href="" data-bs-toggle="modal" data-bs-target="#daftarModal"
+                >Masuk</a
+              >
+            </p>
+            <button type="button" class="btn btn-primary">Masuk</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir modals -->
+
+    <!-- awal jumbotron -->
+    <div class="main container-fluid d-flex flex-column position-relative">
+      <div class="jumbotron container my-auto text-light">
+        <h1 class="text-uppercase tagline">
+          Search Your Best <span class="text-primary">Gaming</span> Partners
+        </h1>
+        <h5 class="fw-light">
+          Search your gaming gear, buy and be a pro player
+        </h5>
+        <a
+          class="btn btn-primary fs-4 mt-md-3"
+          href="shop-page.html"
+          role="button"
+          >Search Now<i class="bi bi-chevron-compact-right"></i>
+        </a>
+      </div>
+    </div>
+    <!-- akhir jumbotron -->
+
+    <!-- awal kategori -->
+    <div class="kategori container">
+      <div class="ktgr keyboard rounded-1 ps-md-3 ps-2">
+        <a href="shop-page.html#keyboard">
+          <h3>Keyboard</h3>
+        </a>
+      </div>
+      <div class="ktgr controller rounded-1 ps-md-3 ps-2">
+        <a href="shop-page.html#controller">
+          <h3>Controller</h3>
+        </a>
+      </div>
+      <div class="ktgr headset rounded-1 ps-md-3 ps-2">
+        <a href="shop-page.html#headset">
+          <h3>Headset</h3>
+        </a>
+      </div>
+      <div class="ktgr mouse rounded-1 ps-md-3 ps-2">
+        <a href="shop-page.html#mouse">
+          <h3>Mouse</h3>
+        </a>
+      </div>
+      <div class="ktgr chair rounded-1 ps-md-3 ps-2">
+        <a href="shop-page.html#chair">
+          <h3>Gaming Chair</h3>
+        </a>
+      </div>
+    </div>
+    <!-- akhir kategori -->
+
+    <!-- awal footer -->
+    <footer class="bg-dark text-light fw-light text-center">
+      <div class="footer">
+        <p>Made with <i class="bi bi-heart-fill"></i></p>
+        <p>
+          Created by
+          <a href="https://www.instagram.com/prasetya_ferri/" target="_blank"
+            >Ferri Adi Prasetya</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- akhir footer -->
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- My JS -->
+    <script src="landing-script.js"></script>
+  </body>
+</html>

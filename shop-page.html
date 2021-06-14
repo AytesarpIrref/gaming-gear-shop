@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="asset/css/shop-style.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <title>GamingGearShop_Shop</title>
+  </head>
+  <body>
+    <!-- awal navbar -->
+    <nav class="navbar navbar-light bg-dark position-fixed w-100">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="landing-page.html">
+          <img
+            src="asset/img/landing-page/logo-ggs.png"
+            alt=""
+            width="100"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <form class="d-flex mx-auto search">
+          <div class="input-group">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="basic-addon1"
+            />
+            <a
+              class="input-group-text"
+              id="basic-addon1"
+              href="#"
+              role="button"
+              type="submit"
+              ><i class="bi bi-search"></i
+            ></a>
+          </div>
+        </form>
+        <div class="masuk-daftar ms-auto">
+          <button
+            class="btn btn-primary me-md-1"
+            data-bs-toggle="modal"
+            data-bs-target="#masukModal"
+            type="button"
+          >
+            Masuk
+          </button>
+          <button
+            class="btn btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#daftarModal"
+            type="button"
+          >
+            Daftar
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <!-- awal modals -->
+    <div
+      class="modal fade"
+      id="masukModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Masuk</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-danger" role="alert">
+              Form belum berjalan!
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="username">Nomor HP atau Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Kata sandi</label>
+                <input
+                  type="password"
+                  class="form-control has-validation"
+                  id="password"
+                  name="password"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <a href="">Lupa kata sandi?</a>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="me-auto">
+              Belum punya akun?
+              <a href="" data-bs-toggle="modal" data-bs-target="#daftarModal"
+                >Daftar</a
+              >
+            </p>
+            <button type="button" class="btn btn-primary">Masuk</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="daftarModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Daftar</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-danger" role="alert">
+              Form belum berjalan!
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="username">Nomor HP atau Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Kata sandi</label>
+                <input
+                  type="password"
+                  class="form-control has-validation"
+                  id="password"
+                  name="password"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Ulangi Kata sandi</label>
+                <input
+                  type="password"
+                  class="form-control has-validation"
+                  id="password"
+                  name="password"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="me-auto">
+              Sudah punya akun?
+              <a href="#" data-bs-toggle="modal" data-bs-target="#masukModal"
+                >Masuk</a
+              >
+            </p>
+            <button type="button" class="btn btn-primary">Daftar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir modals -->
+
+    <!-- awal discount -->
+    <div class="discount bg-secondary position-relative">
+      <div
+        id="carouselExampleCaptions"
+        class="discount-carousel carousel slide ms-auto"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="asset/img/discount/banner-fantech.jpg"
+              class="d-block w-100"
+              alt="banner-fantech"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="asset/img/discount/banner-rog"
+              class="d-block w-100"
+              alt="banner-rog"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="asset/img/discount/banner-razer.jpg"
+              class="d-block w-100"
+              alt="banner-razer"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- akhir discount -->
+
+    <!-- awal top-brand -->
+    <div class="top-brand-container p-3 d-md-flex">
+      <div class="side-bar m-auto">
+        <div class="card" style="width: 10rem">
+          <div class="card-header">Kategori</div>
+          <ul class="list-group list-group-flush">
+            <a href="#keyboard"><li class="list-group-item">Keyboard</li></a>
+            <a href="#controller"
+              ><li class="list-group-item">Controller</li></a
+            >
+            <a href="#headset"><li class="list-group-item">Headset</li></a>
+            <a href="#mouse"><li class="list-group-item">Mouse</li></a>
+            <a href="#chair"><li class="list-group-item">Gaming Chair</li></a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="top-brand ms-md-5 mt-3 mt-md-0 text-center w-100">
+        <h1 class="text-center">Top Brand</h1>
+        <div
+          class="top-brand-logo d-md-flex justify-content-around"
+        >
+          <div class="card align-items-center" style="width: 12rem">
+            <img
+              src="asset/img/beranda/logo/razer.jpg"
+              class="card-img-top"
+              alt="Razer"
+              style="height: 10rem; width: 10rem"
+            />
+            <div class="card-body">
+              <h4 class="card-title text-uppercase text-dark">Razer</h4>
+              <a href="https://www.razer.com/" target="_blank" class="card-text">Kunjungi situs resmi</a>
+            </div>
+          </div>
+          <div class="card align-items-center" style="width: 12rem">
+            <img
+              src="asset/img/beranda/logo/rog.png"
+              class="card-img-top"
+              alt="rog"
+              style="height: 10rem; width: 10rem"
+            />
+            <div class="card-body">
+              <h4 class="card-title text-dark text-uppercase">rog</h4>
+              <a href="https://rog.asus.com/id/" target="_blank" class="card-text">Kunjungi situs resmi</a>
+            </div>
+          </div>
+          <div class="card align-items-center" style="width: 12rem">
+            <img
+              src="asset/img/beranda/logo/steelseries.png"
+              class="card-img-top"
+              alt="steelseries"
+              style="height: 10rem; width: 10rem"
+            />
+            <div class="card-body">
+              <h4 class="card-title text-dark text-uppercase">Steelseries</h4>
+              <a href="https://steelseries.com/" target="_blank" class="card-text">Kunjungi situs resmi</a>
+            </div>
+          </div>
+          <div class="card align-items-center" style="width: 12rem">
+            <img
+              src="asset/img/beranda/logo/rexus.png"
+              class="card-img-top"
+              alt="rexus"
+              style="height: 10rem; width: 10rem"
+            />
+            <div class="card-body">
+              <h4 class="card-title text-dark text-uppercase">rexus</h4>
+              <a href="https://rexus.id/" target="_blank" class="card-text">Kunjungi situs resmi</a>
+            </div>
+          </div>
+          <div class="card align-items-center" style="width: 12rem">
+            <img
+              src="asset/img/beranda/logo/fantech.png"
+              class="card-img-top"
+              alt="fantech"
+              style="height: 10rem; width: 10rem"
+            />
+            <div class="card-body">
+              <h4 class="card-title text-dark text-uppercase">fantech</h4>
+              <a href="https://fantech.id/" target="_blank" class="card-text">Kunjungi situs resmi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir top-brand -->
+
+    <!-- awal hot-product -->
+    <div class="hot-product">
+      <h1 class="text-center pt-3">Hot Product</h1>
+
+      <!-- keyboard -->
+      <div class="keyboard px-3" id="keyboard">
+        <h3>Keyboard</h3>
+        <div class="keyboard-product d-md-flex justify-content-between m-auto">
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/keyboard/Hyperx Alloy Origins Thumbnail.jpg"
+              class="card-img-top"
+              alt="Hyperx Alloy Origins"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Hyperx Alloy Origins</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/keyboard/Keychron K6 Thumbnail.jpg"
+              class="card-img-top"
+              alt="Keychron K6"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Keychron K6</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/keyboard/Razer Blackwidow Elite Thumbnail.jpg"
+              class="card-img-top"
+              alt="Razer Blackwidow Elite"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Razer Blackwidow Elite</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/keyboard/Steelseries Apex 5 Thumbnail.jpg"
+              class="card-img-top"
+              alt="Steelseries Apex 5"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Steelseries Apex 5</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/keyboard/Rexus Daxa M84 Pro Thumbnail.jpg"
+              class="card-img-top"
+              alt="Rexus Daxa M84 Pro"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Rexus Daxa M84 Pro</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+      </div>
+      <hr />
+
+      <!-- controller -->
+      <div class="controller mt-md-3" id="controller">
+        <h3>Controller</h3>
+        <div class="controller-product d-md-flex justify-content-between">
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/controller/Fantech Revolver GP12 Thumbnail.jpg"
+              class="card-img-top"
+              alt="Fantech Revolver GP12"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Fantech Revolver GP12</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/controller/Logitech F710 Thumbnail.jpg"
+              class="card-img-top"
+              alt="Logitech F710"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Logitech F710</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/controller/Razer Raiju Ultimate Thumbnail.jpg"
+              class="card-img-top"
+              alt="Razer Raiju Ultimate"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Razer Raiju Ultimate</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/controller/SteelSeries Nimbus Thumbnail.jpg"
+              class="card-img-top"
+              alt="SteelSeries Nimbus"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">SteelSeries Nimbus</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/controller/Rexus Gladius GX2 Thumbnail.jpg"
+              class="card-img-top"
+              alt="Rexus Gladius GX2"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Rexus Gladius GX2</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- headset -->
+      <div class="headset mt-md-3" id="headset">
+        <h3>Headset</h3>
+        <div class="headset-product d-md-flex justify-content-between">
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/headset/Razer Blackshark V2 X Thumbnail.jpg"
+              class="card-img-top"
+              alt="Razer Blackshark V2 X"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Razer Blackshark V2 X</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/headset/steelseries Arctis Pro Thumbnail.jpg"
+              class="card-img-top"
+              alt="steelseries Arctis Pro"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Steelseries Arctis Pro</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/headset/Logitech G331 Thumbnail.jpg"
+              class="card-img-top"
+              alt="Logitech G331"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Logitech G331</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/headset/Rexus HX20 Thundervox Stream Thumbnail.jpg"
+              class="card-img-top"
+              alt="Rexus HX20 Thundervox Stream"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Rexus HX20 Thundervox Stream</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/headset/FANTECH VALOR MH86 Thumbnail.jpg"
+              class="card-img-top"
+              alt="FANTECH VALOR MH86"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">FANTECH VALOR MH86</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- mouse -->
+      <div class="mouse mt-md-3" id="mouse">
+        <h3>Mouse</h3>
+        <div class="mouse-product d-md-flex justify-content-between">
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/mouse/ASUS ROG Chakram Thumbnail.jpg"
+              class="card-img-top"
+              alt="ASUS ROG Chakram"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">ASUS ROG Chakram</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/mouse/Razer Basilisk V2 Thumbnail.jpg"
+              class="card-img-top"
+              alt="Razer Basilisk V2"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Razer Basilisk V2</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/mouse/Logitech Pro X Superlight Thumbnail.jpg"
+              class="card-img-top"
+              alt="Logitech Pro X Superlight"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Logitech Pro X Superlight</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/mouse/Steelseries Rival 650 Thumbnail.jpg"
+              class="card-img-top"
+              alt="Steelseries Rival 650"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Steelseries Rival 650</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/mouse/Rexus Mouse Wireless Daxa Air II Thumbnail.jpg"
+              class="card-img-top"
+              alt="Rexus Mouse Wireless Daxa Air II"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Rexus Mouse Wireless Daxa Air II</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- gaming chair -->
+      <div class="chair mt-md-3" id="chair">
+        <h3>Gaming Chair</h3>
+        <div class="chair-product d-md-flex justify-content-between">
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/chair/Razer Iskur Thumbnail.jpg"
+              class="card-img-top"
+              alt="Razer Iskur"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Razer Iskur</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/chair/ONEX GX3 Thumbnail.jpg"
+              class="card-img-top"
+              alt="ONEX GX3"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">ONEX GX3</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/chair/STracing Trident Thumbnail.jpg"
+              class="card-img-top"
+              alt="STracing Trident"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">STracing Trident</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/chair/Rexus Gaming Chair RGC 101 Thumbnail.jpg"
+              class="card-img-top"
+              alt="Rexus Gaming Chair RGC 101"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Rexus Gaming Chair RGC 101</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; height: 23rem">
+            <img
+              src="asset/img/beranda/chair/Sades Draco Thumbnail.jpg"
+              class="card-img-top"
+              alt="Sades Draco"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-normal">Sades Draco</h5>
+              <p class="card-text fw-bold">Rp. 000.000.000</p>
+              <p>Terjual : 256</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir hot-product -->
+
+    <!-- awal detail product -->
+    <div
+      class="modal fade"
+      id="detailModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Product</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir detail product -->
+
+    <!-- awal footer -->
+    <footer class="bg-dark text-light fw-light text-center mt-5">
+      <div class="footer">
+        <p>Made with <i class="bi bi-heart-fill"></i></p>
+        <p>
+          Created by
+          <a href="https://www.instagram.com/prasetya_ferri/" target="_blank"
+            >Ferri Adi Prasetya</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- akhir footer -->
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

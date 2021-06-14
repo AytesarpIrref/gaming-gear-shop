@@ -1,0 +1,59 @@
+body {
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+* {
+  font-family: "Rubik", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+nav {
+  z-index: 10;
+}
+.search {
+  width: 60vw;
+}
+
+.top-brand a {
+  font-size: 0.8rem;
+}
+
+.hot-product {
+  background-color: #d1d1d1;
+}
+
+footer p {
+  margin: 0;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  color: white;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 768px) {
+  .search {
+    position: relative;
+    width: 95vw;
+    top: 50px;
+    z-index: 10;
+  }
+  .masuk-daftar,
+  .navbar-brand {
+    position: absolute;
+  }
+  .masuk-daftar {
+    right: 10px;
+  }
+  .side-bar .card {
+    width: 90vw !important;
+    text-align: center;
+    margin: auto;
+  }
+}

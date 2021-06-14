@@ -1,0 +1,82 @@
+body {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: black;
+}
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+nav {
+  z-index: 10;
+}
+.main {
+  height: 100vh;
+  background-image: url(../img/landing-page/background/main-bg-edit.jpg);
+  background-size: cover;
+  background-position-y: -150px;
+  background-repeat: no-repeat;
+}
+
+.tagline {
+  color: #bbb;
+}
+
+.ktgr {
+  color: white;
+  height: 7rem;
+  margin: 2rem 0 2rem 0;
+  opacity: 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ktgr:hover {
+  opacity: 100%;
+  transition: 400ms;
+}
+.ktgr h3 {
+  line-height: 7rem;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.ktgr a {
+  color: white;
+  text-decoration: none;
+}
+.kategori > .keyboard {
+  background-image: url(../img/landing-page/background/bg-keyboard.jpg);
+}
+.kategori > .controller {
+  background-image: url(../img/landing-page/background/bg-controller.jpg);
+}
+.kategori > .headset {
+  background-image: url(../img/landing-page/background/bg-headset.jpg);
+}
+.kategori > .mouse {
+  background-image: url(../img/landing-page/background/bg-mouse.jpg);
+}
+.kategori > .chair {
+  background-image: url(../img/landing-page/background/bg-chair.jpg);
+}
+
+footer p {
+  margin: 0;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  color: white;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 768px) {
+  .ktgr {
+    background-position-x: -150px;
+  }
+  .main {
+    background-position-y: 0;
+  }
+}
