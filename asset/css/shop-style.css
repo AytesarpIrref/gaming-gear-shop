@@ -56,4 +56,25 @@ footer a:hover {
     text-align: center;
     margin: auto;
   }
+  .top-brand-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hot-product h3 {
+    text-align: center;
+  }
+  .keyboard,
+  .controller,
+  .headset,
+  .mouse,
+  .chair {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hot-product .card {
+    margin-bottom: 10px;
+  }
 }
